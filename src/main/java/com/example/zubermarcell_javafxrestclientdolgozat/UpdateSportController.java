@@ -32,6 +32,7 @@ public class UpdateSportController extends Controller {
         nameField.setText(this.sport.getName());
         sportField.setText(this.sport.getSport());
         ageField.getValueFactory().setValue(this.sport.getAge());
+        levelField.setText(this.sport.getLevel());
     }
 
     @FXML
@@ -45,6 +46,7 @@ public class UpdateSportController extends Controller {
     public void updateClick(ActionEvent actionEvent) {
         String name = nameField.getText().trim();
         String sport = sportField.getText().trim();
+        String level = levelField.getText().trim();
         int age = ageField.getValue();
         if (name.isEmpty()) {
             warning("Name is required");
@@ -54,9 +56,14 @@ public class UpdateSportController extends Controller {
             warning("Sport is required");
             return;
         }
+        if (level.isEmpty()) {
+            warning("Level is required");
+            return;
+        }
         this.sport.setName(name);
         this.sport.setSport(sport);
         this.sport.setAge(age);
+        this.sport.setLevel(level);
         Gson converter = new Gson();
         String json = converter.toJson(this.sport);
         try {
