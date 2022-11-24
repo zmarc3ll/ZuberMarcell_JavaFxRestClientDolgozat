@@ -33,7 +33,6 @@ public class SportController extends Controller {
 
     @FXML
     private void initialize() {
-        // getName() függvény eredményét írja ki
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         sportCol.setCellValueFactory(new PropertyValueFactory<>("sport"));
         ageCol.setCellValueFactory(new PropertyValueFactory<>("age"));
@@ -99,8 +98,8 @@ public class SportController extends Controller {
             Stage stage = new Stage();
             stage.setTitle("Update Sports");
             stage.setScene(scene);
-            UpdatePeopleController controller = fxmlLoader.getController();
-            controller.setPerson(selected);
+            UpdateSportController controller = fxmlLoader.getController();
+            controller.setSport(selected);
             stage.show();
             insertButton.setDisable(true);
             updateButton.setDisable(true);
