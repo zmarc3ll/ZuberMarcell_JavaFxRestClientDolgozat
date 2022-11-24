@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zubermarcell_javafxrestclientdolgozat.AppController">
+<VBox prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zubermarcell_javafxrestclientdolgozat.SportController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <children>
         <HBox spacing="20.0">
             <children>
-                <Button fx:id="insertButton" mnemonicParsing="false" onAction="" text="Insert" />
-                <Button fx:id="updateButton" mnemonicParsing="false" onAction="" text="Update" />
-                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="" text="Delete" />
+                <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertClick" text="Insert" />
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateClick" text="Update" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteClick" text="Delete" />
             </children>
         </HBox>
         <TableView fx:id="sportTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
