@@ -8,11 +8,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SportApp extends Application {
+    public static final String BASE_URL = "https://retoolapi.dev/EenZTR/sportData";
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SportApp.class.getResource("sportApp-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        stage.setTitle("Sports");
         stage.setScene(scene);
         stage.show();
     }
