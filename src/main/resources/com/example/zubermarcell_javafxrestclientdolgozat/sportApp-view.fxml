@@ -19,7 +19,7 @@
                 <Button fx:id="deleteButton" mnemonicParsing="false" onAction="" text="Delete" />
             </children>
         </HBox>
-        <TableView fx:id="peopleTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <TableView fx:id="sportTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
             <columns>
                 <TableColumn fx:id="nameCol" minWidth="50.0" prefWidth="230.0" text="Name" />
                 <TableColumn fx:id="sportCol" minWidth="50.0" prefWidth="260.0" text="Sport" />
